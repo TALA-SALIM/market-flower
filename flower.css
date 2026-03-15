@@ -1,0 +1,65 @@
+body {
+    background-image: url('flowers.jpg');
+    background-size: cover;
+    background-attachment: scroll;
+}
+    .top {
+        text-align: center; }
+
+#main, #about, #contact {
+ background-color: white;
+ color: rgb(189, 13, 13);
+ border: 2px dotted #4CAF50;
+    padding: 10px 24px;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+.top select {
+    padding: 10px;
+    font-size: 16px;
+    margin: 4px 30px 0px 400px;
+    border: 2px dotted #4CAF50;
+     color: rgb(189, 13, 13);
+}
+.aboutus {
+    margin: 100px;
+    text-align: end;
+    color: rgb(13, 1, 1);
+}
+.aboutus img {
+   
+    margin: 80px 50px;
+    float: left;
+}
+#title , #paragh {
+    font-size: 36px;
+    color: rgb(13, 1, 1);
+    
+}
+ table  {
+    text-align: center;
+    border-collapse: separate;
+    width: 70%;
+    border: 5px solid #4CAF50;
+    justify-self: center;
+}
+ th , td    {
+
+    border: 3px solid #4CAF50;
+    padding: 8px;
+    }
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+    ul{
+        justify-self:center;
+        margin: 80px 400px;
+    list-style-type: none;
+    text-align: right;
+    background-color: thistle;
+    }
+    ul p {
+        font-size: 24px;
+        color: rgb(13, 1, 1);
+    }
