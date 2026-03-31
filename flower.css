@@ -5,8 +5,7 @@ body {
 }
     .top {
         text-align: center; }
-
-#main, #about, #contact {
+    #main, #about, #contact ,select ,#login button {
  background-color: white;
  color: rgb(189, 13, 13);
  border: 2px dotted #4CAF50;
@@ -14,12 +13,16 @@ body {
     font-size: 16px;
     margin: 4px 2px;
 }
-.top select {
+.top button:hover {
+    background-color: #4CAF50;
+    color: white;
+}                                   
+.top form {
+    display: inline-block;
+    margin-left: 20px;
     padding: 10px;
     font-size: 16px;
-    margin: 4px 30px 0px 400px;
-    border: 2px dotted #4CAF50;
-     color: rgb(189, 13, 13);
+        margin: 4px 30px 0px 400px;
 }
 .aboutus {
     margin: 100px;

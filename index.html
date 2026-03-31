@@ -11,11 +11,18 @@
         <button id="main">الرئيسية</button>
         <button id="about">عن الموقع</button>
         <button id="contact">اتصل بنا</button>
-
-        <select id="language">
+         <select id="language">
             <option value="ar">العربية</option>
             <option value="en">English</option>
         </select>
+        <form id="login">
+            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+            <input type="password" id="password" placeholder="كلمة المرور" required>
+            <button type="submit">دخول</button>
+            <button type="button" id="register">تسجيل</button>
+        </form>
+
+       <p id="massege"></p>
     </div>
 
     <div class="aboutus">
@@ -70,6 +77,6 @@
     <li>خدمة عملاء متاحة على مدار الساعة للرد على استفساراتكم.</li> 
     </ul>
 
-
+<script src="login.js"></script>
 </body>
 </html>
