@@ -80,7 +80,7 @@ app.post("/login", async (req, res) => {
     res.status(500).json({ message: "حدث خطأ في السيرفر" });
   }
 });
-
-app.listen(port, "0.0.0.0", () => {
+const port = process.env.PORT || 3000;  
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server running on port ${port}`);
 });
