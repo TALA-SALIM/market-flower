@@ -21,16 +21,15 @@ loginForm.addEventListener("submit", async function (event) {
   }
 
   try {
-    const API_URL = "https://market-flower-production.up.railway.app";
+const API_URL = "https://market-flower-production.up.railway.app";
 
-fetch(`${API_URL}/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-
-      body: JSON.stringify({ email, password }),
-    });
+const response = await fetch(`${API_URL}/register`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ name, email, password }),
+});
 
     const data = await response.json();
 

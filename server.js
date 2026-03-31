@@ -4,13 +4,16 @@ const bcrypt = require("bcryptjs");
 const { Pool } = require("pg");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 app.get("/", (req, res) => {
@@ -43,7 +46,7 @@ app.post("/register", async (req, res) => {
 
     res.status(201).json({ message: "تم إنشاء الحساب بنجاح" });
   } catch (error) {
-    console.error(error);
+    console.error("register error:", error);
     res.status(500).json({ message: "حدث خطأ في السيرفر" });
   }
 });
@@ -74,11 +77,11 @@ app.post("/login", async (req, res) => {
 
     res.status(200).json({ message: "تم تسجيل الدخول بنجاح" });
   } catch (error) {
-    console.error(error);
+    console.error("login error:", error);
     res.status(500).json({ message: "حدث خطأ في السيرفر" });
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server running on port ${port}`);
 });
