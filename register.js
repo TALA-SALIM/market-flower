@@ -18,7 +18,9 @@ registerForm.addEventListener("submit", async function (event) {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/register", {
+    const API_URL = "https://market-flower-production.up.railway.app";
+
+fetch(`${API_URL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
